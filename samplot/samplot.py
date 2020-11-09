@@ -3407,10 +3407,13 @@ def plot_transcript(
         ax.plot(
             p, [transcript_idx, transcript_idx], "-", color="cornflowerblue", lw=0.5
         )
-
+        ltr_count = len(step.info["Name"])
+        
         ax.text(
             p[0],
             transcript_idx + 0.02,
+            #p[0]-(ltr_count*0.008),
+            #transcript_idx - 0.3,
             step.info["Name"],
             color="blue",
             fontsize=annotation_fontsize,
